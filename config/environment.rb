@@ -10,6 +10,9 @@ Bundler.require
 
 
 # put the code to connect to the database here
-
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/artists.sqlite"
+) #rake -T commands are listed 
 
 require_relative "../artist.rb"
